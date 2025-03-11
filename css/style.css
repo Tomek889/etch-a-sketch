@@ -15,11 +15,6 @@
     border: 20px solid blue;
 }
 
-.grid-row {
-    width: calc(100% / 16);
-}
-
 .square {
     border: 1px solid black;
-    height: calc(100% / 16);
 }
