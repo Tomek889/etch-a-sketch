@@ -32,16 +32,36 @@ function createGrid(size) {
 
 
 function getGridSize() {
-    
+    let size = parseInt(prompt("Enter the number of squares per side (max 100):"));
+    if (size && size >= 1 && size <= 100) {
+        return size;
+    }
+    return;
 }
 
 
-const container = document.querySelector(".container")
+function removeGrid() {
+
+}
+
+
+const container = document.querySelector(".container");
+const createGridButton = document.querySelector(".btn");
 
 
 container.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains("square")) {
         event.target.style.background = getRandomColor();
+    }
+});
+
+createGridButton.addEventListener("click", () => {
+    const selectedGridSize = getGridSize();
+    if (selectedGridSize) {
+        removeGrid();
+        createGrid(selectedGridSize);
+    } else {
+        alert("Invalid input.");
     }
 });
 
