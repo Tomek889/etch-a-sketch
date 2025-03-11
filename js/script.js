@@ -43,11 +43,7 @@ function getGridSize() {
 function removeGrid() {
     document.querySelectorAll(".grid-row").forEach((square) => {
         square.remove();
-    });
-
-    document.querySelectorAll(".square").forEach((square) => {
-        square.remove();
-    });    
+    });  
 }
 
 
