@@ -22,3 +22,8 @@ for (let i = 0; i < 16; i++) {
     }
 }
 
+container.addEventListener("mouseover", (event) => {
+    if (event.target.classList.contains("square")) {
+        event.target.style.background = getRandomColor();
+    }
+});
