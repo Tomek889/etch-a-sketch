@@ -31,6 +31,11 @@ function createGrid(size) {
 }
 
 
+function getGridSize() {
+    
+}
+
+
 const container = document.querySelector(".container")
 
 
@@ -41,4 +46,4 @@ container.addEventListener("mouseover", (event) => {
 });
 
 
-createGrid(10);
+createGrid(16);
