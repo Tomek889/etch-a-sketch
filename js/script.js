@@ -32,7 +32,7 @@ function createGrid(size) {
 
 
 function getGridSize() {
-    let size = parseInt(prompt("Enter the number of squares per side (max 100):"));
+    let size = parseInt(prompt("Enter the number of squares per side (max. 100):"));
     if (size && size >= 1 && size <= 100) {
         return size;
     }
@@ -41,7 +41,13 @@ function getGridSize() {
 
 
 function removeGrid() {
+    document.querySelectorAll(".grid-row").forEach((square) => {
+        square.remove();
+    });
 
+    document.querySelectorAll(".square").forEach((square) => {
+        square.remove();
+    });    
 }
 
 
